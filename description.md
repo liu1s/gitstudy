@@ -52,12 +52,34 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 >````git merge lpmt16825 #合并lpmt16825到master分支,这个步骤已经被在iDeliver中实现,并且个人没有权限进行这个操作````
 
 ##Git的一些基本命令
-git remote [-v] | add | rm         
-git branch [-r d D] | [branchname]
-git checkout [-b -t]
-git add . | [filename]
-git commit [-m a]
-git push
-git merge
-git rebase
+>````git remote [-v] #显示所有的远程仓库````
+
+>````git remote add <name> <url> #添加远程仓库````
+
+>````git remote rm <name> #删除相应的远程仓库````
+
+>````git branch [-v] #显示所有的本地分支````
+
+>````git branch [-r] #显示所有的远程分支````
+
+>````git branch <branchname> #创建相应的本地分支````
+
+>````git branch [-d|D] <branchname> #删除相应的本地分支````
+        
+>````git checkout <branchname> #切换到相应分支````
+
+>````git chechout -b <branchname> <repository>/<branchname> #创建对应的本地分支,并获取对应远程分支的代码````
+
+>````git add [filename | .] #添加相应文件到暂存区````
+
+>````git commit -m <comment> #将暂存区的更改添加到本地仓库````
+
+>````git push <repository> <local branchname>:<branchname> #将本地分支的内容推送到对应的远程分支,如果远程分支不存在则创建对应的远程分支````
+
+>````git push <repository> :<branchname> # 删除远程仓库分支````
+
+>````git merge <branchname> #合并对应分支到当前分支````
+
+>````git rebase <branchname> #将对应分支的变更衍生到当前分支````
+
 
