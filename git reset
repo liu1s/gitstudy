@@ -1,0 +1,15 @@
+git reset --hard [HEAD | COMMITID | branchname@{}] -- [filename]
+git reset --soft [HEAD | COMMITID | branchname@{}] -- [filename]
+git reset --mixed [HEAD | COMMITID | branchname@{}] -- [filename]
+--hard 工作区,暂存区,head都会被修改
+--soft 工作区,暂存区不会变化,head会被变化
+--mixed  工作区会变化,head和暂存区不会变化
+
+--  file 只改变暂存区的文件内容,不会改变head和工作区内容
+
+
+无法执行:git
+git reset --hard 112d476 -- git-test
+git reset --soft 112d476 -- git-test
+
+
